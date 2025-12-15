@@ -9,60 +9,18 @@
 
   &__text {
     display: grid;
-    font-weight: 500;
-        font-size: 16px;
-        line-height: 140%;
-        &--link {
-          text-decoration: none;
-          color: #fff;
-        }
     row-gap: 16px;
     grid-column: 1 / -1;
+    padding-bottom: 48px;
 
     @include on-tablet {
-      grid-column: 1 / 4;
+      grid-column: 1 / 3;
     }
 
     @include on-desktop {
-      grid-column: 1 / 9;
+      grid-column: 1 / 4;
     }
-
-    &__address {
-      grid-column: 1 / -1;
-
-      @include on-tablet {
-        grid-column: 4 / 3;
-      }
-
-      @include on-desktop {
-        grid-column: 4 / 7;
-      }
-      &__address {
-      &__title {
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 140%;
-        letter-spacing: 0;
-      }
-      &__text {
-
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 140%;
-        &--link {
-          text-decoration: none;
-          color: #fff;
-        }
-      }
-      }
-
-
-
-
-
-
-    }
-    &--name {
+     &--name {
       font-family: Poppins, sans-serif;
       color: #7e7e83;
       width: 278px;
@@ -80,9 +38,11 @@
       &:hover ,
       &:focus ,
       &:active,
-      &:required {
+      &:required,
+      &::placeholder {
         color: #292929;
       }
+
       @include on-desktop {
         width: 411px;
       }
@@ -104,18 +64,20 @@
       &:hover ,
       &:focus ,
       &:active,
-      &:required {
+      &:required,
+      &::placeholder,
+      &::after {
         color: #292929;
       }
+
       @include on-desktop {
         width: 411px;
       }
     }
     &--message {
-
       font-family: Poppins, sans-serif;
       resize: none;
-font-weight: 400;
+      font-weight: 400;
       color: #7e7e83;
       width: 278px;
       height: 148px;
@@ -136,7 +98,7 @@ font-weight: 400;
       &:focus,
       &:active,
       &:required,
-      &::selection{
+      &::placeholder {
         color: #292929;
         outline: none;
       }
@@ -181,4 +143,37 @@ font-weight: 400;
       }
     }
   }
+    &__address {
+      grid-column: 1 / -1;
+
+      @include on-tablet {
+        grid-column: 4 / 6;
+      }
+
+      @include on-desktop {
+        grid-column: 9 / -1;
+      }
+
+      &__title {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        letter-spacing: 0;
+      }
+      &__text {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        letter-spacing: 0;
+        &--link {
+          text-decoration: none;
+          color: #fff;
+          &:hover {
+            color: #BABABA;
+          }
+        }
+      }
+    }
+
+
 }

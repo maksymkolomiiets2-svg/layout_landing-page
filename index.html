@@ -152,16 +152,19 @@
       <section class="contacts" id="contacts">
         <h2 class="section--title">Contact us</h2>
         <div class="content__text">
-          <form class="contacts__text">
+          <form onsubmit="this.reset();return false;" class="contacts__text">
             <input class="contacts__text--name"
           type="text" name="name"
+          required
           placeholder="Name">
             <input class="contacts__text--email"
           type="email" name="email"
+          required
           placeholder="Email">
-            <textarea class="contacts__text--message"  placeholder="Message"></textarea>
+            <textarea class="contacts__text--message" required
+            placeholder="Message" rows="5"></textarea>
             <input class="contacts__text__button"
-          type="button" value="Send">
+          type="submit" value="Send">
           </form>
           <article class="contacts__address">
             <p class="contacts__address__title">Phone</p>
