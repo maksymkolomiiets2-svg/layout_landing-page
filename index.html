@@ -8,7 +8,7 @@
       content="width=device-width, initial-scale=1.0"
     />
     <link rel="icon" href="./src/images/Vector.png">
-    <title>Landing Page</title>
+    <title>MyBiKE</title>
     <link
       rel="stylesheet"
       href="src/styles/main.scss"
@@ -26,7 +26,7 @@
         </a>
 
         <div class="header__icons">
-          <a class="logo logo--contact" href="#"></a>
+          <a class="logo logo--contact" href="tel:+1 234 5555-55-55"></a>
           <a class="logo logo--menu" href="#menu"></a>
         </div>
       </div>
@@ -159,26 +159,28 @@
             <input class="contacts__text--email"
           type="email" name="email"
           placeholder="Email">
-            <input class="contacts__text--message"
-          type="text" name="Message"
-          placeholder="Message">
+            <textarea class="contacts__text--message"  placeholder="Message"></textarea>
             <input class="contacts__text__button"
           type="button" value="Send">
           </form>
-          <div class="contacts__adresse">
-            <p class="contacts__adresse__text1">Phone</p>
-            <p class="contacts__adresse__text">+1 234 5555-55-55</p>
-            <p class="contacts__adresse__text1">Email</p>
-            <p class="contacts__adresse__text">hello@miami.com</p>
-            <p class="contacts__adresse__text1">Address</p>
-            <p class="contacts__adresse__text">400 first ave. suite 700 Minneapolis, MN 55401</p>
-          </div>
+          <article class="contacts__address">
+            <p class="contacts__address__title">Phone</p>
+            <a href="tel:+1 234 5555-55-55" class="contacts__address__text--link">+1 234 5555-55-55</a>
+            <p class="contacts__address__title">Email</p>
+            <a href="mailto:hello@miami.com" class="contacts__address__text--link">hello@miami.com</a>
+            <p class="contacts__address__title">Address</p>
+            <a href="https://maps.app.goo.gl/W71wHaYmoZuQAB5aA" target="_blank"
+              class="contacts__address__text--link">
+              400 first ave.<br>
+              suite 700 <br>
+             Minneapolis, MN 55401 <br>
+            </a>
+          </article>
         </div>
       </section>
     </main>
     <footer class="footer">
       <div class="footer__photo"></div>
-
     </footer>
 
   </body>

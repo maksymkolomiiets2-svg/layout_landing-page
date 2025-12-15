@@ -9,6 +9,13 @@
 
   &__text {
     display: grid;
+    font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        &--link {
+          text-decoration: none;
+          color: #fff;
+        }
     row-gap: 16px;
     grid-column: 1 / -1;
 
@@ -20,7 +27,7 @@
       grid-column: 1 / 9;
     }
 
-    &__adresse {
+    &__address {
       grid-column: 1 / -1;
 
       @include on-tablet {
@@ -30,20 +37,33 @@
       @include on-desktop {
         grid-column: 4 / 7;
       }
-      &__text1 {
+      &__address {
+      &__title {
         font-weight: 400;
         font-size: 14px;
         line-height: 140%;
         letter-spacing: 0;
       }
       &__text {
+
         font-weight: 500;
         font-size: 16px;
         line-height: 140%;
-        letter-spacing: 0;
+        &--link {
+          text-decoration: none;
+          color: #fff;
+        }
       }
+      }
+
+
+
+
+
+
     }
     &--name {
+      font-family: Poppins, sans-serif;
       color: #7e7e83;
       width: 278px;
       height: 48px;
@@ -55,12 +75,20 @@
 
       line-height: 20px;
       letter-spacing: 0;
-
+      outline: none;
+      border: none;
+      &:hover ,
+      &:focus ,
+      &:active,
+      &:required {
+        color: #292929;
+      }
       @include on-desktop {
         width: 411px;
       }
     }
     &--email {
+      font-family: Poppins, sans-serif;
       color: #7e7e83;
       width: 278px;
       height: 48px;
@@ -71,34 +99,52 @@
       font-size: 14px;
       line-height: 20px;
       letter-spacing: 0;
-
+      outline: none;
+      border: none;
+      &:hover ,
+      &:focus ,
+      &:active,
+      &:required {
+        color: #292929;
+      }
       @include on-desktop {
         width: 411px;
       }
     }
     &--message {
+
+      font-family: Poppins, sans-serif;
+      resize: none;
+font-weight: 400;
       color: #7e7e83;
       width: 278px;
       height: 148px;
-      top: 3944px;
+
+      padding-top: 15px;
       padding-left: 22.04px;
-      gap: 10px;
+
       border-radius: 16px;
-      font-weight: 400;
+
       font-size: 14px;
       line-height: 20px;
       letter-spacing: 0;
 
-      @include on-desktop {
-        width: 411px;
-      }
-      &:hover {
-        color: #292929;
-      }
-      &::placeholder {
+
+      outline: none;
+      border: none;
+      &:hover,
+      &:focus,
+      &:active,
+      &:required,
+      &::selection{
         color: #292929;
         outline: none;
       }
+
+
+      @include on-desktop {
+        width: 411px;
+}
     }
     &__button {
       display: grid;
@@ -107,6 +153,8 @@
       height: 56px;
       top: 4124px;
       left: 20px;
+      border: none;
+
 
       @include on-desktop {
         width: 411px;
